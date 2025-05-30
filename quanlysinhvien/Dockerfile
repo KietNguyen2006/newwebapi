@@ -7,7 +7,9 @@ ENV ASPNETCORE_URLS=http://+:5212
 FROM mcr.microsoft.com/dotnet/sdk:8.0-nanoserver-1809 AS build
 ARG configuration=Release
 WORKDIR /src
-COPY ["quanlysinhvien/quanlysinhvien.csproj", "quanlysinhvien/"]
+COPY ["quanlysinhvien.csproj", "./"]
+
+
 RUN dotnet restore "quanlysinhvien\quanlysinhvien.csproj"
 COPY . .
 WORKDIR "/src/quanlysinhvien"
