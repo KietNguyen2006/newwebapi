@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\quanlysinhvien.props" />
+</Project>
